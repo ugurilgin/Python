@@ -1,27 +1,23 @@
-print() Fonksiyonu
-Geçen bölümde bir yandan Python’ın etkilesimli kabugunu yakından tanıyıp bu vesileyle bazı
-önemli fonksiyon ve araçları ögrenirken, öbür yandan bu ögrendiklerimizi kullanarak örnek
-programlar yazdık. Gördügünüz gibi, azıcık bir bilgiyle dahi az çok ise yarar programlar
-yazmak mümkün olabiliyor. Daha yararlı programlar yazabilmek için henüz ögrenmemiz
-gereken pek çok sey var. Iste bu bölümde, ‘daha yararlı programlar yazmamızı’ saglayacak
-çok önemli bir araçtan söz edecegiz. Öneminden dolayı ayrıntılı bir sekilde anlatacagımız bu
-aracın adı print() fonksiyonu.
-Elbette bu bölümde sadece print() fonksiyonundan bahsetmeyecegiz. Bu bölümde print()
+# print() Fonksiyonu
+
+* Elbette bu bölümde sadece print() fonksiyonundan bahsetmeyecegiz. Bu bölümde print()
 fonksiyonunun yanısıra Python’daki bazı önemli temel konuları da ele alacagız. Mesela bu
 bölümde Python’daki karakter dizilerine ve sayılara iliskin çok önemli bilgiler verecegiz. Ayrıca
 print() fonksiyonu vesilesiyle Python’daki ‘fonksiyon’ konusuna da saglam bir giris yapmıs,
 bu kavram ile ilgili ilk bilgilerimizi almıs olacagız. Sözün özü, bu bölüm bizim için, deyim
 yerindeyse, tam anlamıyla bir dönüm noktası olacak.
-O halde isterseniz lafı daha fazla uzatmadan ise print() fonksiyonunun ne oldugu ve ne ise
+* O halde isterseniz lafı daha fazla uzatmadan ise print() fonksiyonunun ne oldugu ve ne ise
 yaradıgını anlatarak baslayalım.
-Nedir, Ne Ise Yarar?
+# Nedir, Ne Ise Yarar?
 Simdiye kadar etkilesimli kabukta gerek karakter dizilerini gerekse sayıları dogrudan ekrana
 yazdık. Yani söyle bir sey yaptık:
+~~~~javascript
 >>> "Python programlama dili"
 'Python programlama dili'
 >>> 6567
 6567
-Etkilesimli kabuk da, ekrana yazdıgımız bu karakter dizisi ve sayıyı dogrudan bize çıktı
+~~~~
+ *Etkilesimli kabuk da, ekrana yazdıgımız bu karakter dizisi ve sayıyı dogrudan bize çıktı
 olarak verdi. Ancak ilerde Python kodlarımızı bir dosyaya kaydedip çalıstırdıgımızda da
 göreceginiz gibi, Python’ın ekrana çıktı verebilmesi için yukarıdaki kullanım yeterli degildir.
 Yani yukarıdaki kullanım yalnızca etkilesimli kabukta çalısır. Bu kodları bir dosyaya kaydedip
@@ -29,17 +25,17 @@ Yani yukarıdaki kullanım yalnızca etkilesimli kabukta çalısır. Bu kodları
 olarak verilebilmesi için print() adlı özel bir fonksiyondan yararlanmamız gerekir.
 O halde gelin bu print() fonksiyonunun ne ise yaradıgını ve nasıl kullanıldıgını anlamaya
 çalısalım:
-50
-Python 3 için Türkçe Kılavuz, Sürüm 3
-print() de tıpkı daha önce gördügümüz type(), len() ve pow() gibi bir fonksiyondur.
+* print() de tıpkı daha önce gördügümüz type(), len() ve pow() gibi bir fonksiyondur.
 Fonksiyonları ilerde daha ayrıntılı bir sekilde inceleyecegimizi söylemistik hatırlarsanız. O
 yüzden fonksiyon kelimesine takılarak, burada anlattıgımız seylerin kafanızı karıstırmasına,
 moralinizi bozmasına izin vermeyin.
-print() fonksiyonunun görevi ekrana çıktı vermemizi saglamaktır. Hemen bununla ilgili bir
+* print() fonksiyonunun görevi ekrana çıktı vermemizi saglamaktır. Hemen bununla ilgili bir
 örnek verelim:
+~~~~javascript
 >>> print("Python programlama dili")
-Python programlama dili
-Bildiginiz gibi burada gördügümüz “Python programlama dili” bir karakter dizisidir. Iste
+~~~~
+* Python programlama dili
+* Bildiginiz gibi burada gördügümüz “Python programlama dili” bir karakter dizisidir. Iste
 print() fonksiyonunun görevi bu karakter dizisini ekrana çıktı olarak vermektir. Peki
 bu karakter dizisini print() fonksiyonu olmadan yazdıgımızda da ekrana çıktı vermis
 olmuyor muyuz? Aslında olmuyoruz. Dedigimiz gibi, ilerde programlarımızı dosyalara
