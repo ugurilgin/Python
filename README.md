@@ -17,7 +17,7 @@ yazdık. Yani söyle bir sey yaptık:
 >>> 6567
 6567
 ~~~~
- *Etkilesimli kabuk da, ekrana yazdıgımız bu karakter dizisi ve sayıyı dogrudan bize çıktı
+ * Etkilesimli kabuk da, ekrana yazdıgımız bu karakter dizisi ve sayıyı dogrudan bize çıktı
 olarak verdi. Ancak ilerde Python kodlarımızı bir dosyaya kaydedip çalıstırdıgımızda da
 göreceginiz gibi, Python’ın ekrana çıktı verebilmesi için yukarıdaki kullanım yeterli degildir.
 Yani yukarıdaki kullanım yalnızca etkilesimli kabukta çalısır. Bu kodları bir dosyaya kaydedip
@@ -34,63 +34,68 @@ moralinizi bozmasına izin vermeyin.
 ~~~~javascript
 >>> print("Python programlama dili")
 ~~~~
-* Python programlama dili
+# Python programlama dili
 * Bildiginiz gibi burada gördügümüz “Python programlama dili” bir karakter dizisidir. Iste
 print() fonksiyonunun görevi bu karakter dizisini ekrana çıktı olarak vermektir. Peki
 bu karakter dizisini print() fonksiyonu olmadan yazdıgımızda da ekrana çıktı vermis
 olmuyor muyuz? Aslında olmuyoruz. Dedigimiz gibi, ilerde programlarımızı dosyalara
 kaydedip çalıstırdıgımızda, basında print() olmayan ifadelerin çıktıda görünmedigine sahit
 olacaksınız.
-Daha önce de dedigimiz gibi, etkilesimli kabuk bir test ortamı olması açısından rahat bir
+* Daha önce de dedigimiz gibi, etkilesimli kabuk bir test ortamı olması açısından rahat bir
 ortamdır. Bu sebeple bu ortamda ekrana çıktı verebilmek için print() fonksiyonunu
 kullanmak zorunda degilsiniz. Yani basında print() olsa da olmasa da etkilesimli kabuk
 ekrana yazdırmak istediginiz seyi yazdırır. Ama iyi bir alıskanlık olması açısından, ekrana
 herhangi bir sey yazdıracagınızda ben size print() fonksiyonunu kullanmanızı tavsiye
 ederim.
-print() son derece güçlü bir fonksiyondur. Gelin isterseniz bu güçlü ve faydalı fonksiyonu
+* print() son derece güçlü bir fonksiyondur. Gelin isterseniz bu güçlü ve faydalı fonksiyonu
 derin derin incelemeye koyulalım.
-Nasıl Kullanılır?
-Yukarıda verdigimiz örnekte ilk gözümüze çarpan sey, karakter dizisini print()
+# Nasıl Kullanılır?
+* Yukarıda verdigimiz örnekte ilk gözümüze çarpan sey, karakter dizisini print()
 fonksiyonunun parantezleri içine yazmıs olmamızdır. Biz bir fonksiyonun parantezleri içinde
 belirtilen ögelere ‘parametre’ dendigini geçen bölümde ögrenmistik. Tıpkı ögrendigimiz öteki
 fonksiyonlar gibi, print() fonksiyonu da birtakım parametreler alır.
-Bu arada print() fonksiyonunun parantezini açıp parametreyi yazdıktan sonra, parantezi
+* Bu arada print() fonksiyonunun parantezini açıp parametreyi yazdıktan sonra, parantezi
 kapatmayı unutmuyoruz. Python programlama diline yeni baslayanların, hatta bazen
 deneyimli programcıların bile en sık yaptıgı hatalardan biri açtıkları parantezi kapatmayı
 unutmalarıdır.
-Elbette, eger istersek burada dogrudan “Python programlama dili” adlı karakter dizisini
+* Elbette, eger istersek burada dogrudan “Python programlama dili” adlı karakter dizisini
 kullanmak yerine, önce bu karakter dizisini bir degiskene atayıp, sonra da print()
 fonksiyonunun parantezleri içinde bu degiskeni kullanabiliriz. Yani:
+~~~~javascript
 >>> dil = "Python programlama dili"
 >>> print(dil)
-Python programlama dili
-Bu arada, hem simdi verdigimiz, hem de daha önce yazdıgımız örneklerde bir sey dikkatinizi
+~~~~
+* Bu arada, hem simdi verdigimiz, hem de daha önce yazdıgımız örneklerde bir sey dikkatinizi
 çekmis olmalı. Simdiye kadar verdigimiz örneklerde karakter dizilerini hep çift tırnakla
 gösterdik. Ama aslında tek seçenegimiz çift tırnak degildir. Python bize üç farklı tırnak
 seçenegi sunar:
-6.2. Nasıl Kullanılır? 51
-Python 3 için Türkçe Kılavuz, Sürüm 3
+~~~~javascript
 1. Tek tırnak (‘ ‘)
 2. Çift tırnak (” ”)
 3. Üç tırnak (“”” “””)
+~~~~
 Dolayısıyla yukarıdaki örnegi üç farklı sekilde yazabiliriz:
+~~~~javascript
 >>> print('Python programlama dili')
 Python programlama dili
 >>> print("Python programlama dili")
 Python programlama dili
 >>> print("""Python programlama dili""")
 Python programlama dili
-Gördügünüz gibi çıktılar arasında hiçbir fark yok.
-Peki çıktılarda hiçbir fark yoksa neden üç farklı tırnak çesidi var?
+ ~~~~
+* Gördügünüz gibi çıktılar arasında hiçbir fark yok.
+* Peki çıktılarda hiçbir fark yoksa neden üç farklı tırnak çesidi var?
 Isterseniz bu soruyu bir örnek üzerinden açıklamaya çalısalım. Diyelim ki ekrana söyle bir
 çıktı vermek istiyoruz:
-Python programlama dilinin adı "piton" yılanından gelmez
+* Python programlama dilinin adı "piton" yılanından gelmez
+~~~~javascript
 Eger bu cümleyi çift tırnaklar içinde gösterirsek programımız hata verecektir:
 >>> print("Python programlama dilinin adı "piton" yılanından gelmez")
 File "<stdin>", line 1
 print("Python programlama dilinin adı "piton" yılanından gelmez")
 ^
 SyntaxError: invalid syntax
+~~~~
 Bunun sebebi, cümle içinde geçen ‘piton’ kelimesinin de çift tırnaklar içinde gösterilmis
 olmasıdır. Cümlenin, yani karakter dizisinin kendisi de çift tırnak içinde gösterildigi için
 Python, karakter dizisini baslatan ve bitiren tırnakların hangisi oldugunu ayırt edemiyor.
